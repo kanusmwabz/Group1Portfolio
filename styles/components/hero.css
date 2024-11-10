@@ -46,10 +46,25 @@
 }
 
 .hero__title {
-  color: var(--text-clr);
+  padding: 0 0.1em;
+  color: transparent;
   font-size: var(--size-8xl);
-  letter-spacing: -0.05em;
+  letter-spacing: -0.005em;
   text-shadow: var(--t-shadow-light);
+  background-image: var(--body-gradient);
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-clip: text;
+  animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 .hidden {
@@ -78,10 +93,11 @@
 .scroll {
   list-style: none;
   position: relative;
-  /* width: 100%;
-  max-width: 1024px; */
-  height: 150px;
+  width: 100%;
+  max-width: 1024px;
+  height: 200px;
   margin-inline: auto;
+
   overflow: hidden;
   mask-image: linear-gradient(
     to right,
@@ -99,8 +115,8 @@
 }
 
 .item {
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   position: absolute;
   left: max(calc(200px * 9), 100%);
   animation-name: scrollLeft;
@@ -139,6 +155,22 @@
 
 .item img {
   border-radius: 50%;
+}
+
+#img1,
+#img4,
+#img7 {
+  background-color: var(--img-147);
+}
+#img2,
+#img5,
+#img8 {
+  background-color: var(--img-258);
+}
+#img3,
+#img6,
+#img9 {
+  background-color: var(--img-369);
 }
 
 .wheel-item {

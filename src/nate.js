@@ -1,7 +1,6 @@
 import "../styles/modern-normalize.css";
 import "../styles/style.css";
 import "../styles/components/header.css";
-import "../styles/components/hero.css";
 import "../styles/members/nate.css";
 import "../styles/utils.css";
 
@@ -48,18 +47,3 @@ body.addEventListener("click", (e) => {
   )
     nav.classList.remove("active");
 });
-
-//observer for scroll animation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
-    }
-  });
-});
-
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el) => observer.observe(el));
