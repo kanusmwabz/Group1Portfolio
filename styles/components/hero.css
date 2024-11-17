@@ -157,6 +157,11 @@
   border-radius: 50%;
 }
 
+.item:hover {
+  transform: scale(1.15);
+  transition: all 300ms ease;
+}
+
 #img1,
 #img4,
 #img7 {

@@ -1,0 +1,125 @@
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  backdrop-filter: blur(5px);
+  color: var(--nav-clr);
+  list-style: none;
+  padding: 3rem 0;
+}
+
+.header__logo {
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.header .nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6em;
+  list-style: none;
+}
+
+.header .nav__list a {
+  text-decoration: none;
+  color: var(--nav-clr);
+}
+
+.nav__list li a {
+  position: relative;
+  /* font-size: var(--size-l); */
+  font-weight: 300;
+  color: var(--text-clr);
+  text-decoration: none;
+}
+
+.nav__list li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 5px;
+  top: 25px;
+  transition: 0.3s ease;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--clr-neon),
+    rgba(93, 3, 182, 1) 100%
+  );
+  opacity: 0;
+}
+
+.nav__list li:hover a::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.header__contact {
+  font-size: 1rem;
+
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: 0.125em solid var(--clr-neon);
+  border-radius: 0.25em;
+  background-color: transparent;
+
+  text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.5), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+}
+
+.header__contact::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background-color: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.header__contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.header__contact:hover,
+.header__contact:focus-visible {
+  background: var(--clr-neon);
+  color: var(--nav-clr);
+  text-shadow: none;
+}
+
+.header__contact:hover::before,
+.header__contact:focus-visible::before {
+  opacity: 1;
+}
+
+.header__contact:hover::after,
+.header__contact:focus-visible::after {
+  opacity: 1;
+}
+
+#menu-icon {
+  display: none;
+}

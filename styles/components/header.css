@@ -12,16 +12,16 @@ nav {
   animation: bg-animation 20s infinite alternate;
   z-index: 100;
 
-  --mask: radial-gradient(
-        33.54px at 50% calc(100% - 45px),
-        #000 99%,
-        #0000 101%
-      )
-      calc(50% - 30px) 0/60px 100%,
-    radial-gradient(33.54px at 50% calc(100% + 30px), #0000 99%, #000 101%) 50%
-      calc(100% - 15px) / 60px 100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
+  /* --mask: radial-gradient(
+          33.54px at 50% calc(100% - 45px),
+          #000 99%,
+          #0000 101%
+        )
+        calc(50% - 30px) 0/60px 100%,
+      radial-gradient(33.54px at 50% calc(100% + 30px), #0000 99%, #000 101%) 50%
+        calc(100% - 15px) / 60px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask); */
 }
 
 @keyframes bg-animation {
@@ -63,6 +63,12 @@ nav .nav-bar .logo a {
   text-shadow: var(--t-shadow-light);
   text-decoration: none;
 }
+
+/* .neon-button {
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+  } */
 
 .menu .logo-toggle {
   display: none;
@@ -185,6 +191,7 @@ nav .nav-bar .logo a {
   bottom: -90px;
   opacity: 1;
   pointer-events: auto;
+  z-index: 99999;
 }
 
 .search-field::before {
