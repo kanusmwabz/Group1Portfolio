@@ -1,9 +1,11 @@
 body{
   background-color: black;
+  width: 1400px;
+
 
 }
 body.dark-mode{
-  background-color: rgb(226, 222, 222);
+  background-color: rgb(212, 209, 209);
 }
 
 .element-to-front2 {

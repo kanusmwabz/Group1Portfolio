@@ -1,0 +1,61 @@
+#education-card{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    width: 1400px;
+    height: 250px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 30px;
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #skills-card {
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    width: 1400px;
+    height: 450px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 30px;
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #projects-card{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    width: 1400px;
+    height: 450px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 30px;
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .dark-mode #education-card {
+    border-color: black;
+    color: black;
+  }
+  .dark-mode #skills-card {
+    border-color: black;
+    color: black;
+  }
+  .dark-mode #projects-card {
+    border-color: black;
+    color: black;
+  }
+  h2{
+    text-decoration: underline;
+    margin-bottom: -40px;
+  }
+  p{
+    margin-bottom: -60px;
+  }
