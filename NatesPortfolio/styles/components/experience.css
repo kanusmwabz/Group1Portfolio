@@ -1,0 +1,67 @@
+.section-title {
+  color: var(--text-clr);
+  text-align: center;
+  font-size: var(--size-5xl);
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.experience-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.experience img {
+  width: 24vw;
+  border-radius: 3rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.grid-card {
+  border: 1.5px solid white;
+  color: var(--text-clr);
+  border-radius: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.grid-card:hover {
+  transform: scale(1.02);
+  background-color: black;
+  color: white;
+}
+.grid-card i {
+  font-size: var(--size-2xl);
+  margin-bottom: 1rem;
+}
+.grid-card span {
+  font-size: var(--size-2xl);
+  font-weight: 500;
+  background: linear-gradient(
+    to right,
+    var(--clr-neon),
+    rgba(93, 3, 182, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(219, 219, 219);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    var(--clr-neon),
+    rgba(93, 3, 182, 1) 100%
+  );
+}
